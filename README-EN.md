@@ -841,6 +841,8 @@ frequency_words.txt file added **required word** feature, using + sign
    **GitHub Secret Configuration (⚠️ Name must match exactly):**
    - **Name**: `DINGTALK_WEBHOOK_URL` (Please copy and paste this name, do not type manually)
    - **Secret (Value)**: Your DingTalk bot Webhook address
+   - **Name**: `DINGTALK_SECRET` (Optional, please copy and paste this name)
+   - **Secret (Value)**: Your DingTalk bot signing secret (appears after selecting "Signature" in security settings)
 
    <br>
 
@@ -853,8 +855,9 @@ frequency_words.txt file added **required word** feature, using + sign
 
    2. **Configure Bot**:
       - Set bot name
-      - **Security Settings**:
+      - **Security Settings** (Choose one):
         - **Custom Keywords**: Set "Trending" or "热点"
+        - **Signature**: Copy the secret key starting with `SEC`, and configure it in GitHub Secrets as `DINGTALK_SECRET`
 
    3. **Complete Setup**:
       - Check service terms agreement → Click "Done"
