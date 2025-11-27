@@ -3617,6 +3617,7 @@ def send_to_dingtalk(
         sign = urllib.parse.quote_plus(base64.b64encode(hmac_code))
         webhook_url = f"{webhook_url}&timestamp={timestamp}&sign={sign}"
 
+    print(f"使用的钉钉 Webhook URL: {webhook_url}")
     # 获取分批内容，使用钉钉专用的批次大小
     batches = split_content_into_batches(
         report_data,
